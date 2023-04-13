@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="420.0" prefWidth="690.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ConversionUIController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="9.0" prefHeight="409.0" prefWidth="677.0" style="-fx-background-color: linear-gradient( rgba(229,229,229,1) 0%, rgba(255,255,255,1) 100%); -fx-border-color: grey; -fx-border-width: 0.6; -fx-background-radius: 10; -fx-border-radius: 10;">
+         <children>
+            <Button fx:id="LogoutBtn" contentDisplay="TOP" graphicTextGap="10.0" layoutX="510.0" layoutY="33.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: linear-gradient( rgba(255,209,19,1), rgba(255,253,39,1)); -fx-border-insets: 2; -fx-border-radius: 25; -fx-background-radius: 25;" text="Log out">
+               <font>
+                  <Font name="Segoe UI Semibold Italic" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#dddddd" height="28.78" offsetX="5.0" offsetY="5.0" radius="9.6125" width="11.67" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets bottom="8.0" left="25.0" right="25.0" top="8.0" />
+               </padding>
+            </Button>
+            <Label layoutX="26.0" layoutY="33.0" prefHeight="44.0" prefWidth="307.0" text="Currency Conversion System" underline="true">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="158.0" layoutY="166.0" text="USD">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="447.0" layoutY="166.0" text="NIS">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="312.0" layoutY="234.0" prefHeight="36.0" prefWidth="42.0" text="To">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="53.0" fitWidth="51.0" layoutX="441.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/shekel.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="59.0" layoutX="158.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/dollar.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="usdField" layoutX="116.0" layoutY="234.0" prefHeight="37.0" prefWidth="135.0" style="-fx-border-color: #383838; -fx-background-radius: 10; -fx-border-radius: 10;">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="nisField" layoutX="403.0" layoutY="234.0" prefHeight="37.0" prefWidth="135.0" style="-fx-border-color: #383838; -fx-background-radius: 10; -fx-border-radius: 10;">
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </TextField>
+
+            <Button fx:id="ConvertButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="257.0" layoutY="313.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="53.0" prefWidth="151.0" style="-fx-background-color: rgba(0,169,142,1); -fx-border-insets: 2; -fx-border-radius: 8; -fx-background-radius: 8;" text="Convert!" textAlignment="CENTER" textFill="WHITE">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#dddddd" height="28.78" offsetX="5.0" offsetY="5.0" radius="9.6125" width="11.67" />
+               </effect>
+               <font>
+                  <Font name="Leelawadee UI Bold" size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

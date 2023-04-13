@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="CurrencyConversionPR3.jnlp">
+  <information>
+    <title>CurrencyConversionPR3</title>
+    <vendor>hp</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="CurrencyConversionPR3.jar" size="60566" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="800" height="600" main-class="currencyconversionpr3.CurrencyConversionPR3"  name="CurrencyConversionPR3" />
+  <update check="always"/>
+</jnlp>
