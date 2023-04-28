@@ -15,7 +15,7 @@
    <children>
       <AnchorPane layoutX="7.0" layoutY="9.0" prefHeight="409.0" prefWidth="677.0" style="-fx-background-color: linear-gradient( rgba(229,229,229,1) 0%, rgba(255,255,255,1) 100%); -fx-border-color: grey; -fx-border-width: 0.6; -fx-background-radius: 10; -fx-border-radius: 10;">
          <children>
-            <Button fx:id="LogoutBtn" contentDisplay="TOP" graphicTextGap="10.0" layoutX="510.0" layoutY="33.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" style="-fx-background-color: linear-gradient( rgba(255,209,19,1), rgba(255,253,39,1)); -fx-border-insets: 2; -fx-border-radius: 25; -fx-background-radius: 25;" text="Log out">
+            <Button fx:id="LogoutBtn" contentDisplay="TOP" graphicTextGap="10.0" layoutX="510.0" layoutY="33.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#LogoutAction" style="-fx-background-color: linear-gradient( rgba(255,209,19,1), rgba(255,253,39,1)); -fx-border-insets: 2; -fx-border-radius: 25; -fx-background-radius: 25;" text="Log out">
                <font>
                   <Font name="Segoe UI Semibold Italic" size="20.0" />
                </font>
@@ -70,7 +70,7 @@
                </padding>
             </TextField>
 
-            <Button fx:id="ConvertButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="257.0" layoutY="313.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="53.0" prefWidth="151.0" style="-fx-background-color: rgba(0,169,142,1); -fx-border-insets: 2; -fx-border-radius: 8; -fx-background-radius: 8;" text="Convert!" textAlignment="CENTER" textFill="WHITE">
+            <Button fx:id="ConvertButton" contentDisplay="TOP" graphicTextGap="10.0" layoutX="257.0" layoutY="313.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#ConvertAction" prefHeight="53.0" prefWidth="151.0" style="-fx-background-color: rgba(0,169,142,1); -fx-border-insets: 2; -fx-border-radius: 8; -fx-background-radius: 8;" text="Convert!" textAlignment="CENTER" textFill="WHITE">
                <effect>
                   <DropShadow blurType="GAUSSIAN" color="#dddddd" height="28.78" offsetX="5.0" offsetY="5.0" radius="9.6125" width="11.67" />
                </effect>

@@ -14,11 +14,7 @@ import javafx.scene.control.TextField;
 
 public class ConversionUIController {
 
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
+    DecimalFormat df;
 
     @FXML
     private TextField usdField;
@@ -32,30 +28,36 @@ public class ConversionUIController {
     @FXML
     private TextField nisField;
 
-    @FXML
     void initialize() {
-        DecimalFormat df = new DecimalFormat("#.##");
-        ConvertButton.setOnAction((event) -> {
-            if (!usdField.getText().isEmpty() && nisField.getText().isEmpty()) {
-                nisField.setText((Double.parseDouble(usdField.getText()) * 3.5)+"");
-            } else if (usdField.getText().isEmpty() && !nisField.getText().isEmpty()) {
 
-                usdField.setText(df.format((Double.parseDouble(nisField.getText()) / 3.5))+"");
-            } else {
-                Alert al = new Alert(Alert.AlertType.WARNING);
-                al.setHeaderText("There must be something wrong");
-                al.setContentText("Warning! the two fields can't be empty or full at the same time!");
-                al.showAndWait();
-            }
-        });
-        LogoutBtn.setOnAction((event) -> {
-            View.ViewManager.closeConversionPage();
-            try {
-                View.ViewManager.openLoginPage();
-            } catch (IOException ex) {
-                Logger.getLogger(ConversionUIController.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        });
+    }
+
+    @FXML
+    private void LogoutAction(javafx.event.ActionEvent event) {
+        View.ViewManager.closeConversionPage();
+        try {
+            View.ViewManager.openLoginPage();
+        } catch (IOException ex) {
+            Logger.getLogger(ConversionUIController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
+    @FXML
+    private void ConvertAction(javafx.event.ActionEvent event) {
+        df = new DecimalFormat("#.##");
+
+        if (!usdField.getText().isEmpty() && nisField.getText().isEmpty()) {
+            nisField.setText((Double.parseDouble(usdField.getText()) * 3.5) + "");
+        } else if (usdField.getText().isEmpty() && !nisField.getText().isEmpty()) {
+
+            usdField.setText(df.format((Double.parseDouble(nisField.getText()) / 3.5)) + "");
+        } else {
+            Alert al = new Alert(Alert.AlertType.WARNING);
+            al.setHeaderText("There must be something wrong");
+            al.setContentText("Warning! the two fields can't be empty or full at the same time!");
+            al.showAndWait();
+        }
 
     }
 }

@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="CurrencyConversionPR3.jar" size="60566" download="eager" />
+    <jar href="CurrencyConversionPR3.jar" size="59977" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="currencyconversionpr3.CurrencyConversionPR3"  name="CurrencyConversionPR3" />
   <update check="always"/>
